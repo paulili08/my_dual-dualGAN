@@ -11,7 +11,7 @@ from utils import *
 
 class DualNet(object):
     def __init__(self, sess, image_size=256, batch_size=1,gcn = 64, dcn=64, \
-                 B_channels = 3, C_channels = 3, dataset_name='eeg2audio', \
+                 B_channels = 3, C_channels = 3, dataset_name='eeg2audio', participant = 'sub-01',\
                  checkpoint_dir=None, lambda_B = 500., lambda_C = 500., \
                  sample_dir=None, dropout_rate=0.0, loss_metric = 'L1', flip = False,\
                  n_critic = 5, GAN_type = 'wgan-gp', clip_value = 0.1, log_freq=50, disc_type = 'globalgan'):
@@ -31,11 +31,13 @@ class DualNet(object):
         self.loss_metric = loss_metric
 
         self.dataset_name = dataset_name
-        self.checkpoint_dir = checkpoint_dir
+        self.participant = participant
+        self.checkpoint_dir = checkpoint_dir + '/' + participant + '/'
         
         #directory name for output and logs saving
-        self.dir_name = "%s-img_sz_%s-fltr_dim_%d-%s-lambda_BC_%s_%s" % (
-                    self.dataset_name, 
+        self.dir_name = "%s-%s-img_sz_%s-fltr_dim_%d-%s-lambda_BC_%s_%s" % (
+                    self.dataset_name,
+                    self.participant,
                     self.image_size,
                     self.gcn,
                     self.loss_metric, 

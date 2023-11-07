@@ -147,11 +147,11 @@ class DualNet(object):
     def load_random_samples(self):
         # np.random.choice(
         sample_files = np.random.choice(
-            glob('./datasets/{}/{}/val/A/*.*[g|G]'.format(self.dataset_name, self.participant)), self.batch_size)
+            glob('./datasets/{}/val/{}/A/*.*[g|G]'.format(self.dataset_name, self.participant)), self.batch_size)
         sample_A_imgs = [load_data(f, image_size=self.image_size, flip=False) for f in sample_files]
 
         sample_files = np.random.choice(
-            glob('./datasets/{}/{}/val/B/*.*[g|G]'.format(self.dataset_name, self.participant)), self.batch_size)
+            glob('./datasets/{}/val/{}/B/*.*[g|G]'.format(self.dataset_name, self.participant)), self.batch_size)
         sample_B_imgs = [load_data(f, image_size=self.image_size, flip=False) for f in sample_files]
 
         sample_A_imgs = np.reshape(np.array(sample_A_imgs).astype(np.float32),
