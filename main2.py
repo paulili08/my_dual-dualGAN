@@ -25,7 +25,6 @@ parser.add_argument('--niter', dest='niter', type=int, default=30, help='# of it
 parser.add_argument('--lr', dest='lr', type=float, default=0.0002, help='initial learning rate for adam')  # 0.0002
 parser.add_argument('--beta1', dest='beta1', type=float, default=0.5, help='momentum term of adam')
 parser.add_argument('--flip', dest='flip', type=bool, default=True, help='if flip the images for data argumentation')
-parser.add_argument('--flip', dest='flip', type=bool, default=True, help='if flip the images for data argumentation')
 parser.add_argument('--dataset_name', dest='dataset_name', default='eeg2audio', help='name of the dataset')
 parser.add_argument('--participant', dest='participant', default='sub-01', help='participant of the dataset')
 parser.add_argument('--epoch', dest='epoch', type=int, default=50, help='# of epoch')

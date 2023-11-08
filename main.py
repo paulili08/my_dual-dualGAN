@@ -72,8 +72,6 @@ def main(_):
     if not os.path.exists(sub_log_dir):
         os.makedirs(sub_log_dir)
 
-
-
     with tf.Session() as sess:
         model = DualNet(sess, image_size=args.image_size, batch_size=args.batch_size, \
                         dataset_name=args.dataset_name, participant=args.participant, A_channels=args.A_channels, \
