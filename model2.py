@@ -426,6 +426,7 @@ class DualNet(object):
 
         model_dir = self.dir_name
         checkpoint_dir = os.path.join(checkpoint_dir, model_dir)
+        print(checkpoint_dir)
 
         ckpt = tf.train.get_checkpoint_state(checkpoint_dir)
         if ckpt and ckpt.model_checkpoint_path:
