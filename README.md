@@ -60,4 +60,4 @@ git clone https://github.com/paulili08/my_dual-dualGAN.git
 
 * __ops.py__: Convolution, deconvolution, activate function and loss function for DualGAN.
 
-* __domain_adaptation.py__: replace pre_process.py after executing extract_features.py. Replace "eeg2audio" into "cross_sub" when execute train/test.py.
+* __domain_adaptation.py__: For cross subject validation. Replace pre_process.py after executing extract_features.py. Replace "eeg2audio" into "cross_sub" when execute train/test.py.
