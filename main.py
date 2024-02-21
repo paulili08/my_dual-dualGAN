@@ -43,7 +43,7 @@ parser.add_argument('--disc_type', dest='disc_type', type=str, default='globalga
 parser.add_argument('--log_freq', dest='log_freq', type=int, default=10,
                     help='save the model every save_freq sgd iterations')
 parser.add_argument('--save_freq', dest='save_freq', type=int, default=100,
-                    help='save the model every save_freq sgd iterations')  # 疑似关键
+                    help='save the model every save_freq sgd iterations')
 parser.add_argument('--checkpoint_dir', dest='checkpoint_dir', default='./checkpoint', help='models are saved here')
 parser.add_argument('--sample_dir', dest='sample_dir', default='./sample', help='sample are saved here')
 parser.add_argument('--test_dir', dest='test_dir', default='./test', help='test sample are saved here')
